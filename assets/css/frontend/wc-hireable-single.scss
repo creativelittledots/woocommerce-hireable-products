@@ -1,0 +1,34 @@
+.datepicker__container .pika-single {
+	z-index: 1;
+}
+
+.datepicker__container .pika-lendar {
+	width: 100%;
+	margin: 8px 0 8px 0;
+}
+
+.datepicker__container .pika-title, .datepicker__container .pika-label {
+	background-color: #62718f;
+	color: white;
+}
+
+.datepicker__container .pika-label {
+	display: inline;
+	padding: 0 3px;
+}
+
+.datepicker__container .pika-title {
+	padding: 5px 0;
+}
+
+.datepicker__container .pika-prev, .datepicker__container .pika-next {
+	margin: -3px 0 0 0;
+}
+
+.datepicker__container .pika-prev:hover, .datepicker__container .pika-next:hover {
+	background-color: transparent;
+}
+
+.datepicker__container .pika-prev, .datepicker__container .is-rtl .pika-next {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAUklEQVR42u3VMQoAIBADQf8Pgj+OD9hG2CtONJB2ymQkKe0HbwAP0xucDiQWARITIDEBEnMgMQ8S8+AqBIl6kKgHiXqQqAeJepBo/z38J/U0uAHlaBkBl9I4GwAAAABJRU5ErkJggg==');
+}
