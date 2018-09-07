@@ -51,14 +51,82 @@ if ( ! defined( 'ABSPATH' ) ) {
 			
 		</div>
 		
-		<label>Choose a date range:</label>
+		<label class="datepicker__label">
+			
+			<a class="datepicker__toggle closed js-datepicker-toggle" href="#">
+				
+				<span>Click here to choose a date range:</span>
+				
+			</a>
 		
-		<input type="hidden" name="hire_date_range" id="hire_date_range" class="js-datepicker" />
+		</label>
 		
-		<div class="js-datepicker-container datepicker__container"></div>
+		<div class="datepicker__wrapper js-datepicker-wrapper">
+			
+			<input type="hidden" name="hire_date_range" id="hire_date_range" class="js-datepicker" />
 		
-		<button type="submit" class="button buy radius small-12 disabled js-hireable-product-add-to-cart-button" data-product_id="<?= get_the_ID(); ?>" disabled>Hire product</button>
+			<div class="js-datepicker-container datepicker__container"></div>
+			
+			<button type="submit" class="button buy radius small-12 disabled js-hireable-product-add-to-cart-button" data-product_id="<?= get_the_ID(); ?>" disabled>Hire product</button>
+			
+		</div>
 		
 	<?php endif; ?>
 	
 </div>
+
+<style>
+	
+	.datepicker__toggle, .datepicker__toggle:focus, .datepicker__toggle:hover {
+		
+		font-weight: 600;
+		color: black;
+		font-size: 0.75rem;
+		
+	}
+	
+	.datepicker__wrapper {
+		
+		display: none;
+		width: 100%;
+		
+	}
+	
+	.datepicker__toggle:after {
+		
+		content: '>' !important;
+		position: relative;
+		float: right;
+		color: #b5b5b5;
+		font-weight: 600;
+		font-size: 1rem;
+		transform: scale(1.9, 1.3) rotate(90deg);
+		transition: transform 300ms ease;
+		
+	}
+	
+	.datepicker__toggle.closed:after {
+		
+	    transform: scale(1.9, 1.3) rotate(-90deg);
+	    
+	}
+	
+</style>
+
+<script type="text/javascript">
+
+	jQuery(document).ready(function($) {
+	
+		$('.js-datepicker-toggle').click(function(e) {
+			
+			e.preventDefault();
+			
+			$('.js-datepicker-wrapper').slideToggle();
+			$(this).toggleClass('closed');
+			
+		});
+		
+	});
+	
+	
+</script>
