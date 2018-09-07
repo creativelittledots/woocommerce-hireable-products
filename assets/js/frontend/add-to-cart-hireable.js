@@ -96,6 +96,15 @@ jQuery(document).ready(function($) {
 		}
     });
     
+    $('.js-datepicker-toggle').click(function(e) {
+			
+		e.preventDefault();
+		
+		$('.js-datepicker-wrapper').slideToggle();
+		$(this).toggleClass('closed');
+		
+	});
+    
     $('.js-hireable-product-add-to-cart-button').click(function(e) {
 	   
 		e.preventDefault();
