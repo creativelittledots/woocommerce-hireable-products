@@ -52,7 +52,7 @@ class WC_HP_Order {
 
 		if( ! empty( $item->legacy_values['_hireable_data'] ) ) {
 				
-			$item->update_meta_data('_hireable', $item->legacy_values['hireable']);
+			$item->update_meta_data('_hireable', $item->legacy_values['_hireable_data']);
 			$order->update_meta_data('_hireable', $item->get_product_id());
 			
 		}
